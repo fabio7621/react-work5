@@ -28,11 +28,11 @@ const router = createHashRouter([
         path: "cart",
         element: <CartPage />,
       },
-      {
-        path: "*",
-        element: <PageNotFound />,
-      },
     ],
+  },
+  {
+    path: "*",
+    element: <PageNotFound />,
   },
 ]);
 export default router;

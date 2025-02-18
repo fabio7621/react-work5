@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function PageNotFound() {
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/");
+      navigate(-1);
     }, 1500);
 
     return () => clearTimeout(timer);
@@ -15,6 +15,7 @@ export default function PageNotFound() {
   return (
     <>
       <h1>404: Page Not Found</h1>
+      <Link to="/">回到首頁</Link>
     </>
   );
 }
